@@ -3,9 +3,9 @@ import { StyleSheet, Text, Dimensions, View, TextInput, ViewBase, TouchableOpaci
 import { ScrollView } from 'react-native-gesture-handler'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Dropdown } from 'react-native-element-dropdown'
+import { Checkbox } from 'react-native-paper'
 
 const { width, height } = Dimensions.get('window')
-
 export const RegisterScreen = () => {
 
   const [value, setValue] = useState<string | null>(null);
@@ -95,6 +95,12 @@ export const RegisterScreen = () => {
             </View>
 
 
+            
+            <Text style={styles.secondText1}>Al continuar, aceptas nuestros equipos, condiciones y política de privacidad</Text>
+            
+            
+
+
             <TouchableOpacity style={styles.buttonContainer}>
               <Text style={styles.bottomText}>Registrarse</Text>
             </TouchableOpacity>
@@ -118,6 +124,14 @@ const styles = StyleSheet.create({
     color: '#575454',
     fontSize: width * 0.03,
     textAlign: 'center',
+    marginBottom: height * 0.03,
+  },
+  secondText1:{
+    color: 'green',
+    fontSize: width * 0.027,
+    margin : width * 0.08,
+    textAlign: 'center',
+    marginTop: height * 0.04,
     marginBottom: height * 0.03,
   },
   thirdText:{

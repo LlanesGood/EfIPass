@@ -14,7 +14,7 @@ export const LoginScreen = () => {
         style={styles.image}
       />
 
-      <Text style={styles.firstText}>Bienvenido</Text>
+      <Text style={styles.firstText}>hola como estas</Text>
       <Text style={styles.secondText}>Ingrese sus datos para iniciar sesión</Text>
 
       <View style={styles.inputContainer}>
