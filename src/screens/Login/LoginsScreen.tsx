@@ -14,7 +14,7 @@ export const LoginScreen = () => {
         style={styles.image}
       />
 
-      <Text style={styles.firstText}>hola como estas</Text>
+      <Text style={styles.firstText}>Bienvenido </Text>
       <Text style={styles.secondText}>Ingrese sus datos para iniciar sesión</Text>
 
       <View style={styles.inputContainer}>
@@ -35,12 +35,12 @@ export const LoginScreen = () => {
         />
       </View>
 
-      <TouchableOpacity style={styles.bottom}>
+      <TouchableOpacity style={styles.bottom}onPress={()=>nav.navigate('InicioS' as never)}>
         <Text style={styles.bottomText}>Iniciar</Text>
       </TouchableOpacity>
 
       <View style={styles.forgotContainer}>
-        <TouchableOpacity>
+        <TouchableOpacity  onPress={() => nav.navigate('ForgotPassword' as never)}>
           <Text style={styles.forgotText}>He olvidado mi contraseña</Text>
         </TouchableOpacity>
       </View>
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
   image: {
     alignSelf: 'center',
-    marginTop: height * 0.04,
+    marginTop: height * 0.100,
   },
   firstText: {
     color: '#252525',
@@ -80,13 +80,14 @@ const styles = StyleSheet.create({
     color: '#252525',
     width: '82%',
     fontWeight: 'bold',
-    fontSize: width * 0.033,
+    fontSize: width * 0.036,
   },
   inputContainer: {
     alignItems: 'center',
     marginTop: height * 0.03,
   },
   input: {
+
     borderWidth: 1,
     borderColor: '#AAB7B7',
     width: width * 0.85,

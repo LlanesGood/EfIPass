@@ -1,13 +1,14 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react'
-import { StyleSheet, Text, Dimensions, View, TextInput, ViewBase, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, Dimensions, View, TextInput, ViewBase, TouchableOpacity, Switch } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Dropdown } from 'react-native-element-dropdown'
-import { Checkbox } from 'react-native-paper'
 
 const { width, height } = Dimensions.get('window')
 export const RegisterScreen = () => {
-
+  const nav = useNavigation();
+  const [isNfcEnabled, setIsNfcEnabled] = useState(false);
   const [value, setValue] = useState<string | null>(null);
   const [isFocus, setIsFocus] = useState(false);
 
@@ -94,9 +95,15 @@ export const RegisterScreen = () => {
                   />
             </View>
 
-
-            
-            <Text style={styles.secondText1}>Al continuar, aceptas nuestros equipos, condiciones y política de privacidad</Text>
+            <View style={styles.inputContainer2}>
+            <Switch 
+            value={isNfcEnabled} 
+            onValueChange={setIsNfcEnabled} 
+            trackColor={{ false: "#D3D3D3", true: "#7257FF" }} // Color de la pista
+            thumbColor={isNfcEnabled ? "#FFFFFF" : "#AAB7B7"} // Color del botón
+            />
+            <Text style={styles.secondText1}>Aceptar Terminos, condiciones y política de privacidad</Text>  
+            </View>
             
             
 
@@ -104,6 +111,13 @@ export const RegisterScreen = () => {
             <TouchableOpacity style={styles.buttonContainer}>
               <Text style={styles.bottomText}>Registrarse</Text>
             </TouchableOpacity>
+
+
+            <View style={styles.loginContainer}>
+            <TouchableOpacity onPress={() => nav.goBack ()}>
+                    <Text style={styles.loginText}>Regresar</Text>
+                    </TouchableOpacity>
+                  </View>
 
           </ScrollView>
           
@@ -115,10 +129,10 @@ const styles = StyleSheet.create({
 
   firstText: {
     color: '#252525',
-    fontSize: width * 0.10,
+    fontSize: width * 0.11,// tamaño de la letra 
     fontWeight: 'bold',
     textAlign: 'center',
-    marginTop: height * 0.1,
+    marginTop: height * 0.14,
   },
   secondText:{
     color: '#575454',
@@ -126,24 +140,46 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: height * 0.03,
   },
-  secondText1:{
-    color: 'green',
-    fontSize: width * 0.027,
-    margin : width * 0.08,
+
+    loginText:{
+    color: 'grey',
+    fontSize: width * 0.035,
+    margin : width * 0.07,
     textAlign: 'center',
-    marginTop: height * 0.04,
-    marginBottom: height * 0.03,
+    marginTop: height * 0.001,
+    marginBottom: height * 0.0,
   },
+  loginContainer: {
+    marginTop: height * 0.04,
+    alignSelf: 'center',
+  },
+
   thirdText:{
     color: '#252525',
-    width: '85%',
+    width: '82%',
     fontWeight: 'bold',
-    fontSize: width * 0.03,
+    fontSize: width * 0.034,
   },
   inputContainer:{
     alignItems: 'center',
     marginTop: height * 0.02,
   },
+  inputContainer2: {
+    flexDirection: 'row',  
+    alignItems: 'center',  
+    justifyContent: 'flex-start',  
+    width: width * 0.85,  
+    alignSelf: 'center',  
+    marginTop: height * 0.02,  //  Aumenta este valor para bajarlo
+    flexWrap: 'wrap', 
+  },  
+
+  secondText1: {
+    color: 'black',
+    fontSize: width * 0.028, 
+    marginLeft: width * 0.02, //  Agrega un poco de espacio entre el Switch y el texto
+    flexShrink: 1, //  Evita que el texto se salga de la pantalla 
+  },  
   input: {
     borderWidth: 1,
     borderColor: '#AAB7B7',
@@ -207,7 +243,7 @@ const styles = StyleSheet.create({
     height: height * 0.06,
     justifyContent: 'center',
     alignSelf: 'center',
-    marginTop: height * 0.05,
+    marginTop: height * 0.02,
     borderRadius: 10,
   },
   bottomText: {
