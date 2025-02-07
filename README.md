@@ -10,8 +10,8 @@
 
 ## 🔗 Recursos del Proyecto
 
-- 🎨 Diseño en Figma: [Accede al diseño aquí](https://www.figma.com/design/iUdExX94RDxO31qsWb0C0h/TAKE-IT?node-id=1-1788&t=hmlI9ca0VikOPPjF-1)
-- 🖌 Diseño gráfico en Canva: [Accede aquí](https://www.canva.com/design/DAGSef4-JsU/S6YdkJ9h6yS5z4m4CgDYCw/edit?utm_content=DAGSef4-JsU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+- 🎨 Diseño en Figma: [Accede al diseño aquí]()
+
 
 ---
 
@@ -26,9 +26,14 @@
 
 Este proyecto fue desarrollado por estudiantes de la **Universidad Tecnológica Metropolitana**:
 
-- **Mario Rafael Solis Suarez** ([@Rafaelx-ss](https://github.com/Rafaelx-ss))
-- **Alexis Alexander Bolio Chan** ([@AlexanderPlusD](https://github.com/AlexanderPlusD))
-- **Jose Antonio de Jesus Pool Ku** ([@JosePK0](https://github.com/JosePK0))
+### Integrantes del proyecto:
+### Cristian Llanes  😁
+https://github.com/LlanesGood
+### Guillermo Aguilar 🙂 
+https://github.com/Gu1ll3rmo
+### Luis Diaz 🙂 
+https://github.com/ShakerCandle694
+
 
 
 ---
