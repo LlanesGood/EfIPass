@@ -8,7 +8,7 @@ export const LoginScreen = () => {
   const nav = useNavigation();
 
   return (
-    <SafeAreaView style={styles.mainContainer}>
+    <SafeAreaView style={styles.mainContainer}>// Delimita el entorno
       <Image
         source={require('../../assets/images/logoEfipass.png')}
         style={styles.image}
@@ -32,10 +32,11 @@ export const LoginScreen = () => {
           style={styles.input}
           placeholder='Escribe tu contraseña'
           placeholderTextColor={'grey'}
+          secureTextEntry={true}
         />
       </View>
 
-      <TouchableOpacity style={styles.bottom}onPress={()=>nav.navigate('InicioS' as never)}>
+      <TouchableOpacity style={styles.bottom}onPress={()=>nav.navigate('InicioScreen' as never)}>
         <Text style={styles.bottomText}>Iniciar</Text>
       </TouchableOpacity>
 

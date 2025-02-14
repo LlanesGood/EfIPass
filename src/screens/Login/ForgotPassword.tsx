@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
   },
   bottomText: {
     color: 'white',
-    textAlign: 'center',
+
     fontWeight: 'bold',
     fontSize: width * 0.04,
   },
